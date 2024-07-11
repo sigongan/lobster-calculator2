@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
     <style>
         body {
-           background-image: url('https://github.com/sigongan/lobster-calculator2/blob/main/images/3mm8ar9f.png?raw=true');
+           background-image: url('https://github.com/sigongan/lobster-calculator2/images/3mm8ar9f.png?raw=true');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
