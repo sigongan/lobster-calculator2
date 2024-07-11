@@ -1,4 +1,4 @@
-EE
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@ EE
     <style>
         body {
             font-family: 'Cute Font', cursive;
-            background: url('file:///C:/Users/suwon/Desktop/3mm8ar9f.png') no-repeat center center fixed;
+            background: url('images/3mm8ar9f.png') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
