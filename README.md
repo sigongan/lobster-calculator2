@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Cute Font', cursive;
-            background: url('images/3mm8ar9f.png') no-repeat center center fixed;
+            background-image: url('https://github.com/sigongan/lobster-calculator2/blob/main/images/3mm8ar9f.png?raw=true');
             background-size: cover;
             margin: 0;
             padding: 0;
