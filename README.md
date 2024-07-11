@@ -1,52 +1,98 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobster Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cute Font', cursive;
+            background: url('file:///C:/Users/suwon/Desktop/3mm8ar9f.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>lobster-calculator2 | lobster-calculator</title>
-<meta name="generator" content="Jekyll v3.9.5" />
-<meta property="og:title" content="lobster-calculator2" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="lobster-calculator" />
-<meta property="og:description" content="lobster-calculator" />
-<link rel="canonical" href="https://sigongan.github.io/lobster-calculator2/" />
-<meta property="og:url" content="https://sigongan.github.io/lobster-calculator2/" />
-<meta property="og:site_name" content="lobster-calculator2" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="lobster-calculator2" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"lobster-calculator","headline":"lobster-calculator2","name":"lobster-calculator2","url":"https://sigongan.github.io/lobster-calculator2/"}</script>
-<!-- End Jekyll SEO tag -->
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
 
-    <link rel="stylesheet" href="/lobster-calculator2/assets/css/style.css?v=debae61b664a7e6ce4dd82361d7fb74daf24f5b5">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-<!-- Setup Google Analytics -->
+        label {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
 
+        input {
+            font-size: 18px;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
+        button {
+            font-size: 24px;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/lobster-calculator2/favicon.ico" -->
+        button:hover {
+            background-color: #0056b3;
+        }
 
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-
-      <h1 id="lobster-calculator2">lobster-calculator2</h1>
-<p>lobster-calculator</p>
-
-
-      
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lobster Calculator</h1>
+        <form id="lobsterForm">
+            <label for="weight">Lobster Weight (kg):</label>
+            <input type="number" id="weight" name="weight" step="0.01" required>
+            
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="result"></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-  </body>
-</html># lobster-calculator2
-lobster-calculator
+    <script>
+        document.getElementById('lobsterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const weight = parseFloat(document.getElementById('weight').value);
+            const pricePerKg = 160; // Price per kilogram (AUD)
+            const laborCost = 20; // Labor cost (AUD)
+            
+            const totalPrice = (weight * pricePerKg) + laborCost;
+            
+            document.getElementById('result').textContent = `Total Price: ${totalPrice.toLocaleString()} AUD`;
+        });
+    </script>
+</body>
+</html>
+
