@@ -11,10 +11,12 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             padding: 0;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: 'Arial', sans-serif;
         }
 
         .container {
@@ -74,7 +76,6 @@
         <form id="lobsterForm">
             <label for="weight">Lobster Weight (grams):</label>
             <input type="number" id="weight" name="weight" step="0.01" required>
-            
             <button type="submit">Calculate</button>
         </form>
         <div id="result"></div>
@@ -82,14 +83,11 @@
     <script>
         document.getElementById('lobsterForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
             const weightInGrams = parseFloat(document.getElementById('weight').value);
             const weightInKg = weightInGrams / 1000; // Convert grams to kilograms
             const pricePerKg = 160; // Price per kilogram (AUD)
             const laborCost = 20; // Labor cost (AUD)
-            
             const totalPrice = (weightInKg * pricePerKg) + laborCost;
-            
             document.getElementById('result').textContent = `Total Price: ${totalPrice.toLocaleString()} AUD`;
         });
     </script>
