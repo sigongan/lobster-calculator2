@@ -6,11 +6,10 @@
     <title>Lobster Calculator</title>
     <style>
         body {
-            background-image: url('https://github.com/sigongan/lobster-calculator2/blob/main/images/3mm8ar9f.png?raw=true');
+            background-image: url('https://raw.githubusercontent.com/sigongan/lobster-calculator2/main/images/3mm8ar9f.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -18,7 +17,6 @@
             height: 100vh;
             font-family: 'Arial', sans-serif;
         }
-
         .container {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -27,18 +25,15 @@
             width: 300px;
             text-align: center;
         }
-
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
-
         label {
             font-size: 24px;
             display: block;
             margin-bottom: 5px;
         }
-
         input {
             font-size: 18px;
             width: 100%;
@@ -47,7 +42,6 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-
         button {
             font-size: 24px;
             width: 100%;
@@ -58,11 +52,9 @@
             border-radius: 4px;
             cursor: pointer;
         }
-
         button:hover {
             background-color: #0056b3;
         }
-
         #result {
             margin-top: 20px;
             font-size: 24px;
@@ -84,9 +76,9 @@
         document.getElementById('lobsterForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const weightInGrams = parseFloat(document.getElementById('weight').value);
-            const weightInKg = weightInGrams / 1000; // Convert grams to kilograms
-            const pricePerKg = 160; // Price per kilogram (AUD)
-            const laborCost = 20; // Labor cost (AUD)
+            const weightInKg = weightInGrams / 1000;
+            const pricePerKg = 160;
+            const laborCost = 20;
             const totalPrice = (weightInKg * pricePerKg) + laborCost;
             document.getElementById('result').textContent = `Total Price: ${totalPrice.toLocaleString()} AUD`;
         });
