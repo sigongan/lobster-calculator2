@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lobster Calculator</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            background-image: url('https://raw.githubusercontent.com/sigongan/lobster-calculator2/main/images/3mm8ar9f.png');
+            background-image: url('https://images.unsplash.com/photo-1529121262420-fd3bfe5c54d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -15,42 +17,52 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 340px;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: translateY(-10px);
         }
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
+            font-weight: 700;
+            color: #0056b3;
         }
         label {
-            font-size: 24px;
+            font-size: 20px;
             display: block;
             margin-bottom: 5px;
+            font-weight: 700;
         }
         input {
             font-size: 18px;
             width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
         button {
-            font-size: 24px;
+            font-size: 20px;
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #0056b3;
